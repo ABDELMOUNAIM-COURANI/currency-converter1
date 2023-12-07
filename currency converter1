@@ -17,7 +17,7 @@ class currency_converter:
         curr2 = str(input("To: ").upper())
         return curr1, curr2, amount
     def bring_currencies(curr1, curr2, amount):
-        api_url = "https://v6.exchangerate-api.com/v6/8df632a3d20e3d7a62433030/latest/pair/{curr1}/{curr2}/{amount}"
+        api_url = "https://v6.exchangerate-api.com/v6/api_key/latest/pair/{curr1}/{curr2}/{amount}"
         response = requests.get(api_url)
         data = response
         if response.status_code == 200:#200 is an http code that means ok, request was successful, and others like 404 error mean not found
