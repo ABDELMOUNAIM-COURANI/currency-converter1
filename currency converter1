@@ -17,6 +17,7 @@ class currency_converter:
         curr2 = str(input("To: ").upper())
         return curr1, curr2, amount
     def bring_currencies(curr1, curr2, amount):
+        api_url = "api_key"
         api_url = "https://v6.exchangerate-api.com/v6/api_key/latest/pair/{curr1}/{curr2}/{amount}"
         response = requests.get(api_url)
         data = response
